@@ -37,6 +37,9 @@ public class TCredito {
     @Column(name = "tarjeta_id")
     private Long tarjetaId;
 
+    //@Column(name = "cliente_id")
+    //private Long clienteId;
+
     @Column(name = "estado")
     private String estado = "1";
 }

@@ -19,6 +19,8 @@ public class Tarjeta {
     @Column(name = "id")
     private Long id;
 
+    //1: tarjeta de debito
+    //2: tarjeta de credito
     @Column(name = "tipo_tarjeta")
     private String tipotarjeta;
 
