@@ -17,4 +17,6 @@ public interface TarjetaService {
 
     void delete(Long id);
 
+    Tarjeta findByNumeroTarjeta(String numeroTarjeta);
+
 }

@@ -74,4 +74,18 @@ public class TarjetaServiceImpl implements TarjetaService {
         tObtenida.setEstado("0");
         tarjetaRepository.persist(tObtenida);
     }
+
+    @Override
+    public Tarjeta findByNumeroTarjeta(String numeroTarjeta) {
+        List<Tarjeta> tarjetas = tarjetaRepository.listAll();
+        Tarjeta tObtenida = new Tarjeta();
+
+        for (Tarjeta t: tarjetas) {
+            if(t.getNumeroTarjeta().equals(numeroTarjeta)) {
+                tObtenida = t;
+            }
+        }
+
+        return tObtenida;
+    }
 }

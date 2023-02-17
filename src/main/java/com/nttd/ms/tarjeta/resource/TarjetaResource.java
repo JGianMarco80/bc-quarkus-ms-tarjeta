@@ -48,4 +48,10 @@ public class TarjetaResource {
     public void delete(@PathParam("id") Long id){
         tarjetaService.delete(id);
     }
+
+    @GET
+    @Path("/numero-tarjeta")
+    public Tarjeta findAll(@QueryParam("numeroTarjeta") String numeroTarjeta) {
+        return tarjetaService.findByNumeroTarjeta(numeroTarjeta);
+    }
 }
